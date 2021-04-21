@@ -18,10 +18,20 @@ const createNewBook = async () => {
 
 
 //Read a book
-
+const readBook = async () => {
+  const readOneBook = await Book.deleteMany();
+  console.log("Read book", deleteBooks);
+}
 
 
 //Update a book
+const updateBook = async () => {
+  const readOneBook = await Book.updateOne({title: "28 Summers"}, { $set: {published_date: "2010"}, $currentDate: {lastModified: true } })
+
+  console.log("Read book", readOneBook);
+}
+
+
 
 
 
@@ -57,6 +67,7 @@ const run = async () => {
 
   // await findBook();
   await findAll();
+  // await updateBook();
 
   // await deleteAll()
 
