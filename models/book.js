@@ -7,7 +7,7 @@ const Book = new Schema(
     title: { type: String, required: true },
     author: { type: String, required: true },
     published_date: { type: String, required: true },
-    published_id: {type: Schema.Types.ObjectId, ref: 'publisher_id'},
+    publisher_id: {type: Schema.Types.ObjectId, ref: 'publisher_id'},
   },
   {timestamps: true},
 );
